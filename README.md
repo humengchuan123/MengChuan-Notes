@@ -57,3 +57,20 @@
        $git mv
        
        $gitignore
+
+       mkdir 创建文件
+
+       git merge  （分子名）  分支合并
+
+       git pull origin master  主分支改变情况
+
+       Linux 命名 进入编辑命令：vim (文件名)    可输入模式 ： 点 i    存储： 点esc  ：w  enter  退出编辑模式：q   存储退出 ：wq
+
+       利用git 启一个http sever ：npm install http-server -g  
+        http-server -p (端口)
+
+        浏览器版本检测跟新：<!--[if lte IE 8]>
+    <p class="browserupgrade">您的浏览器版本老的可笑，请到 <a href="http://browsehappy.com 
+
+           ">这里</a> 更新，以获取最佳的体验</p>
+              <![endif] -->
