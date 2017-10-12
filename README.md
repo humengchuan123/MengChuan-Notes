@@ -47,6 +47,12 @@
        git checkout <新分支名字>  切换到你的新分支
        
        $git add {}    《添加你所要上传的文件或者代码》
+
+       ·  git add -A  提交所有变化
+
+       ·  git add -u  提交被修改(modified)和被删除(deleted)文件，不包括新文件(new)
+
+       ·  git add .  提交新文件(new)和被修改(modified)文件，不包括被删除(deleted)文件
        
        $git commit -m "提交的描述"  《列出提交，或者修改原因，方便出现错误时，可以回滚》
        
