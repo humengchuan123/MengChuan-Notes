@@ -1,0 +1,17 @@
+$ touch xx  创建文件
+$ mkdir xx  创建文件夹
+$ cd  进入文件夹
+  cd .. 返回上一级目录
+
+cmd命名行
+$ 从C盘去其他盘符 d：
+
+
+创建webpack打包
+$ npm init 
+$ npm install webpack --save-dev
+
+创建一个本地服务器
+$ npm install http-server -g
+$ http-server -p 8080
+
