@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		'use strict'
+		{
+			let obj={
+				time:'2017-12-18',
+				name:'tony',
+				age:28
+			};
+			let monitor = new Proxy(obj,{
+				// 拦截对象属性读取
+				get(target,key){
+					return target[key].replace('2017','2018')
+
+				},
+				//拦截对象设置属性
+				set(target,key,value){
+					if (key==='name'||key==='age') {
+						return target[key] = value;
+					}else {
+						return target[key];
+					}
+				}
+			})
+			console.log(monitor.time)
+			monitor.time = '2013';
+			monitor.name = 'tom';
+			monitor.age = 25;
+			console.log(monitor)
+		}
+	</script>
+</body>
+</html>

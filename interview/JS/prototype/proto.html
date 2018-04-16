@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// 字面量
+		var o1 = {name:'o1'};
+		var o2 = new Object({name:'o2'});
+
+		// 构造函数
+		 var M = function(name){this.name = name};
+		 var o3 = new M('o3');
+
+		 // Oject.create
+		 var p = {name:'p'};
+		 var o4 = Object.create(p);
+
+		 M.prototype.say = function () {
+		 	console.log('我是小明')
+		 };
+		 var o5= new M('o5');
+		 o5.say();
+	</script>
+</body>
+</html>

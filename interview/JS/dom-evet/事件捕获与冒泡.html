@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>event-捕获</title>
+	<style type="text/css">
+		#eve{
+			width: 200px;
+			height: 90px;
+			background: green;
+			text-align: center;
+			line-height: 90px;
+		}
+	</style>
+</head>
+<body>
+	<div id="eve">
+		目标元素
+	</div>
+	<script type="text/javascript">
+		// 事件捕获节点从上到下，事件注册的第三属性true控制
+		// 事件冒泡从节点出发到，最外层window对象，事件注册的第三属性false控制
+		var eve = document.getElementById('eve');
+
+		window.addEventListener('click',function () {
+			console.log('window')
+		},false);
+		document.addEventListener('click', function(){
+			console.log('document')
+		},false)
+		document.documentElement.addEventListener('click',function(){
+            console.log('html')
+		},false)
+		document.body.addEventListener('click', function(){
+			console.log('body')
+		},false)
+		eve.addEventListener('click',function(){
+			console.log('eve')
+		},false)
+	</script>
+</body>
+</html>

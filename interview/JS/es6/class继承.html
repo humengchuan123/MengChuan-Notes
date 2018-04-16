@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h1>class继承</h1>
+</body>
+</html>
+<script type="text/javascript">
+	'use strict'
+{       
+	// 声明和生成实例
+		class Parent{
+		constructor(name,age,sex){
+			this.name = name;
+			this.age = age;
+			this.sex = sex;
+		}
+	};
+	let man = new Parent('tom','25','man');
+	 console.log(man);
+	
+}
+
+{
+	 // 继承
+	 class Parent{
+	 	constructor(name='xiaoming',age='22'){
+	 		this.name = name;
+	 		this.age = age
+	 	}
+	 };
+
+	class Child extends Parent {
+        
+	};
+	console.log('继承',new Child());
+	
+}
+{
+	// 继承传递参数
+	class Parent{
+	 	constructor(name='xiaoming',age='22'){
+	 		this.name = name;
+	 		this.age = age
+	 	}
+	 };
+
+	class Child extends Parent {
+        constructor(name=''){
+        	super(name);
+        	this.type = 'children';
+        }
+	};
+	console.log('继承传递参数',new Child('ASAN'));
+}
+
+</script>

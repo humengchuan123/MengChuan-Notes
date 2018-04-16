@@ -15,3 +15,15 @@ $ npm install webpack --save-dev
 $ npm install http-server -g
 $ http-server -p 8080
 
+为动画DOM元素添加CSS3样式-webkit-transform:transition3d(0,0,0)或
+-webkit-transform:translateZ(0);，这两个属性都会开启GPU硬件加速模式，
+从而让浏览器在渲染动画时从CPU转向GPU，其实说白了这是一个小伎俩，
+也可以算是一个Hack，-webkit-transform:transition3d和-webkit-transform:translateZ
+其实是为了渲染3D样式，但我们设置值为0后，并没有真正使用3D效果，
+但浏览器却因此开启了GPU硬件加速模式。
+
+<meta name="renderer" content="webkit">
+浏览器双核，走webkit内核。
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+浏览器在IE情况下走Edge最高版本，如果有Chrome走Chrome浏览器渲染。
+dns预解析提升性能优化。

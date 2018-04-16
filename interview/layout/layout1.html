@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+        *{
+                padding: 0;
+                margin: 0;
+        }
+	.box {
+	        height: 400px;
+		border: 3px solid #eee;
+		}
+        .box div{
+                height: 400px;
+        }
+        .box-item1{
+        	width: 300px;
+        	float: left;
+        	background: red;
+        }
+        .box-item2{
+        	background: pink;  
+        }
+        .box-item3{
+        	width: 300px;
+        	float: right ;
+        	background: green;
+        }
+        .layout article div{
+        min-height: 100px;
+         }
+
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="box-item1"></div>
+                <div class="box-item3"></div>
+		<div class="box-item2"></div>
+		
+	</div>
+         <section class="layout float">
+      <style media="screen">
+      .layout.float .left{
+        float:left;
+        width:300px;
+        background: red;
+      }
+      .layout.float .center{
+        background: yellow;
+      }
+      .layout.float .right{
+        float:right;
+        width:300px;
+        background: blue;
+      }
+      </style>
+      <h1>三栏布局</h1>
+      <article class="left-right-center">
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="center">
+          <h2>浮动解决方案</h2>
+          1.这是三栏布局的浮动解决方案
+        </div>
+      </article>
+    </section>
+
+     
+</body>
+</html>

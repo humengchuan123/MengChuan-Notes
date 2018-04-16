@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// 类的声明
+		function Animal () {
+			this.name = 'name'
+		}
+		// ES6中声明类
+		class Animal2 {
+			constructor () {
+				this.name = 'name'
+			}
+		}
+
+		// 实例化
+		console.log(new Animal(), new Animal2());
+
+		// 构造继承
+		function Parent1 () {
+            this.name = 'parent1'
+		}
+		function Chlid1 (){
+			Parent1.call(this);
+			this.type = 'child1';
+		}
+		console.log(new Chlid1());
+
+		// 原型继承
+		 function Parent2 () {
+		 	this.name = 'parent2'
+		 }
+		 function Child2() {
+		 	this.type = 'child2'
+		 }
+		 Child2.prototype = new Parent2();
+		 console.log(new Child2());
+
+		 // 组合继承
+		 function Parent3 (){
+		 	this.name = 'parent3';
+		 	this.show = [1,2,3]
+		 }
+		 function Child3() {
+            Parent3.call(this);
+            this.type = 'child3';
+		 }
+		 Child3.prototype = new Parent3 ();
+		 var s3 = new Child3();
+		 var s4 = new Child3();
+		 s4.show.push(4);
+		 console.log(s3.show,s4.show)
+	</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function P(data,time){
+			    this.data = data;
+                this.time = time;
+		}
+		P.prototype.show = function(){
+			console.log(this.data + ':' + this.time)
+		};
+		var today = new P("星期日","11:49");
+		var time1 = new Date();
+         console.log(time1)
+		today.show();
+	</script>
+</body>
+</html>

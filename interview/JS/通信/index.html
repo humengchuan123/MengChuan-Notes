@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>通信方式</title>
+</head>
+<body>
+	<section>
+		<article>
+			
+		</article>
+	</section>
+	<script type="text/javascript">
+	var script = document.createElement('script');
+	var url = 'xxx.com'
+	script.src=url;
+	document.body.appendChild('script');
+
+	var xhr = new XMLHttpRequest();
+	xhr.open ="";
+	xhr.send(null);
+	xhr.onreadystatechange = function() {
+		if (xhr.status==200&&xhr.readyState==4) {
+			var data = xhr.responseText;
+		}
+	}
+</script>
+</body>
+</html>
