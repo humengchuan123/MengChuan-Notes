@@ -1,0 +1,34 @@
+手机开发：
+1.注意css盒子尺寸，避免文本多，内容大时，出现溢出。破坏布局。有的盒子根据情况设定宽高。避免适配在不同机型下兼容。
+2.多文本省略，单行文本省略，和多行文本省略配合使用。
+3.在浏览器或手机默认最小字体是，无法放入内容，可进行css字体缩放。
+4.百分比分配单行。
+
+5.jquary下，ajax数据请求后，事件失效，放在on内on('event','selecter',function)。 事件不能放在外面单独写发event(function).
+6.事件关联点击获取上个的id，然后载入下个事件关联请求，两者从而关联上  $(this).attr('id');
+7.怪胎火狐event无法识别，需要兼容写法。arguments.callee.caller.arguments[0];
+var event = window.event || arguments.callee.caller.arguments[0];
+                  event.stopPropagation();
+
+
+8.移动端开发框架zepto.js，在开发使用外链js编写脚本时，引入的JS需要放在dom节点最下面，不然无效，具体猜测原因，dom树还未渲染前 zepto.js无法拿到节点。
+
+9.Math.floor(Math.random()*(max-min+1)+min);随机整数公式中无法取到max和min的值如果要取到必须在范围扩大一个数。
+
+10.兼容IE8浏览器，IE8浏览器对于大多数的H5新特性标签都不支持，就联一些jq的api兼容性也很差。目前遇到jq的html(),和vedio标签的兼容处理。jq的html()功能在ie6,7,8下JS监测机制是不会执行html()api当中的内容，而在超过ie8之后的浏览器会执行。代替方案使用原生js获取目标id，用innerHTML代替。vedio标签在解决方案如果只需要播放不需要交互只需要添加<script src="http://api.html5media.info/1.1.8/html5media.min.js"></script>即可。
+如果需要交互是改方案失效。执行另外一套方案
+<embed id="video" src="'+url+'" width="100%" height="100%" units="pixels" quality="high" allowfullscreen="true"></embed>。此标签也是html5标签。但作视频用兼容ie8。
+
+11.前端开发引入特殊字体文件，首先拥有.otf .ttf等字体文件。然后@font-face{
+	font-family: HelveticalNeueLTPro ThEx;
+	src: url('../font/HelveticaNeueLTPro-ThEx.otf');
+}
+*{
+	font-family: HelveticalNeueLTPro ThEx;
+}
+后面就可以直接在样式中引用了。
+
+12.
+vue项目上线的时候，前端的项目是通过webpack-dev-server启动的，而webpack-dev-server默认不支持IP的形式进行页面的访问，所以我们应该将它的配置项做一个修改，webpack-dev-server --inline --progress --config build/webpack.dev.conf.js。webpack-dev-server能够通过IP地址被访问的话，只需要在其后面添加一段”--host 0.0.0.0“就可以了，连起来就是"dev": "webpack-dev-server --host 0.0.0.0 --inline --progress --config build/webpack.dev.conf.js"。然后我们保存下package.json文件，重启下服务，再回到浏览器重新输入IP+端口号，发现就可以正常访问了
+
+13.
