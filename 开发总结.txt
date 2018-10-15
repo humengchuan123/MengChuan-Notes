@@ -28,7 +28,7 @@ var event = window.event || arguments.callee.caller.arguments[0];
 }
 后面就可以直接在样式中引用了。
 
-12.
+12.vue开发
   vue项目上线的时候，前端的项目是通过webpack-dev-server启动的，而webpack-dev-server默认不支持IP的形式进行页面的访问，
 所以我们应该将它的配置项做一个修改，webpack-dev-server --inline --progress --config build/webpack.dev.conf.js。
 webpack-dev-server能够通过IP地址被访问的话，只需要在其后面添加一段”--host 0.0.0.0“就可以了，
@@ -41,5 +41,6 @@ webpack-dev-server能够通过IP地址被访问的话，只需要在其后面添加一段”--host 0.0.0
 14.JS块注释 /** + tab键。 VUE在开发组件的时候快速生成模板代码，新建vue文件在文件内输入vue +‘tab或者enter’。
 就能够得到初始模板。
 
-15.生成SSH密钥——使用git bash命令：ssh-keygen -t rsa -b 4096 -C "email address"。然后去githup上添加你的ssh
+15.生成SSH密钥——使用git bash命令：ssh-keygen -t rsa -b 4096 -C "email address"。添加SSH key到ssh-agent，
+$ssh-add ~/.ssh/id_rsa。然后去githup上添加你的ssh 
 
