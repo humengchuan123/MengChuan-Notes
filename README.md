@@ -42,6 +42,8 @@
        git push origin 分支名 推送至分支下
        git pull origin master  主分支改变情况
        git merge  分支名 分支合并（合并后可直接提交至githup）
+       git show   查看最后一次提交记录的  简介 （目录）
+       git reset --hard merge冲突后放弃修改返回上一步
 
        
        
