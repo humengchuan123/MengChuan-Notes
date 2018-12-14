@@ -43,8 +43,11 @@
        git pull origin master  主分支改变情况
        git merge  分支名 分支合并（合并后可直接提交至githup）
        git show   查看最后一次提交记录的  简介 （目录）
-       git reset --hard merge冲突后放弃修改返回上一步
-       git reset --hard head 解决pull之后的冲突
+       解决多人并发修改文件产生冲突
+       当多人开发是有多人同时修改一文件，先签出代码，将合并和代码冲突部分解决。将解决冲突后的文件复制备份，
+       然后
+       git reset --hard head 处理修改冲突返回上一部未修改时状态，再将冲突后处理好的文件，覆盖掉当前冲突文件，
+       然后提交。最后merge其他部分修改文件。
 
        
        
