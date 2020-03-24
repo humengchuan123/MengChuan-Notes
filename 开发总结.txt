@@ -44,3 +44,11 @@ webpack-dev-server能够通过IP地址被访问的话，只需要在其后面添加一段”--host 0.0.0
 15.生成SSH密钥——使用git bash命令：ssh-keygen -t rsa -b 4096 -C "email address"。添加SSH key到ssh-agent，
 $ssh-add ~/.ssh/id_rsa。然后去githup上添加你的ssh 
 
+
+js解决异步的几种办法
+1.callback（缺陷回调陷阱）；2.jq的事件监听；3.promise；4.ES7中的async/await；
+
+w3c标准
+结构html 表现css 行为js  
+
+协议标准 http tcp ssh file ftp 
