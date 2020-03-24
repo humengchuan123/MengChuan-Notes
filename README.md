@@ -33,6 +33,10 @@
        
 
        3.开发常使用git命令
+       git config user.name  查看本地的账号名
+       git config user.email  查看本地邮箱账号
+       git config --global user.name "" 更改本地git账号
+       git config --global user.email "" 更改本地关联邮箱
        git status  列出文件信息，查看文件变化信息
        git add -A  提交所有变化
        git add -u  提交被修改(modified)和被删除(deleted)文件，不包括新文件(new)
@@ -40,9 +44,12 @@
        git commit -m "提交的描述" {必须填写}列出提交，或者修改原因，方便出现错误时，可以回滚
        git push 默认推送至主分支
        git push origin 分支名 推送至分支下
+       git fetch origin master 拉去分支到本地
        git pull origin master  主分支改变情况
        git merge  分支名 分支合并（合并后可直接提交至githup）
        git show   查看最后一次提交记录的  简介 （目录）
+       git remote rm origin  删除远程关联
+       git remote add origin  添加远程关联
        解决多人并发修改文件产生冲突
        当多人开发是有多人同时修改一文件，先签出代码，将合并和代码冲突部分解决。将解决冲突后的文件复制备份，
        然后
@@ -60,8 +67,9 @@
         http-server -p (端口)
 
         浏览器版本检测跟新：
-        <!--[if lte IE 8]>
-        <p class="browserupgrade">您的浏览器版本老旧，
+      <!--[if lte IE 8]>
+      <p class="browserupgrade">您的浏览器版本老旧，
         请到 <a href="http://browsehappy.com">
-        这里</a> 更新，以获取最佳的体验</p>
-              <![endif] -->
+        这里</a> 更新，以获取最佳的体验
+      </p>
+      <![endif] -->
